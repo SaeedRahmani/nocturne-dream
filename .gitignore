@@ -1,4 +1,7 @@
 raw_data/
+outputs/
+gen_nocturne_data_parallel.log
+gen_nocturne_data_sequential.log
 
 # CMake
 build/

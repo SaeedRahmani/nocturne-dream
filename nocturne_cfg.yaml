@@ -1,0 +1,47 @@
+# ------------------------
+## disable the logging in outputs folder.
+hydra:
+  output_subdir: null
+  run:
+    dir: .
+
+# ----- Nocturne dataset ----- #
+nocturne:
+  load_directory: "/home/gavin/DEV/nocturne-dream/raw_data/"
+  save_directory: "/home/gavin/DEV/Dream_Imitation_AVs/raw_data/"
+  parallel: true
+  show_progress_bar: true
+  dataset_mode: "image"
+  format: "zarr"
+  image_dataset:
+    img_width: 256
+    img_height: 256
+    draw_target_positions: true
+    rotate_with_source: true
+  graph_dataset:
+    view_distance: 80
+    view_angle: 120
+    head_angle: 0
+    padding: true
+  load_scenario:
+    # initial timestep of the scenario (which ranges from timesteps 0 to 90)
+    start_time: 0
+    # if set to True, non-vehicle objects (eg. cyclists, pedestrians...) will be spawned
+    allow_non_vehicles: True
+    # for an object to be included into moving_objects
+    moving_threshold: 0.2  # its goal must be at least this distance from its initial position
+    speed_threshold: 0.05  # its speed must be superior to this value at some point
+    # maximum number of each objects visible in the object state
+    # if there are more objects, the closest ones are prioritized
+    # if there are less objects, the features vector is padded with zeros
+    max_visible_objects: 16
+    max_visible_road_points: 1000
+    max_visible_traffic_lights: 20
+    max_visible_stop_signs: 4
+    # from the set of road points that comprise each polyline, we take
+    # every n-th one of these
+    sample_every_n: 1
+    # if true we add all the road-edges (the edges you can collide with)
+    # to the visible road points first and only add the other points
+    # (road lines, lane lines) etc. if we have remaining states after
+    road_edge_first: False
