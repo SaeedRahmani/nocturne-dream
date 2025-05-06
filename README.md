@@ -84,8 +84,7 @@ If you are using [Conda](https://docs.conda.io/en/latest/) (recommended), you ca
 conda env create -f environment.yml --> Do not use this. Go to the next line:
 For our use case: conda create -n nocturne python=3.8 --yes --> pip install -r requirements.txt)
 -- remove the last lines from the requirements.txt file because they are needed later and otherwise it will give error. (from Additions).
-
-NOTE: if we get an error for hydra, skip it for now. 
+-- Then install those packages afterwards ONE BY ONE. Otherwise, it might give dependencies issues.
 
 # activate the environment where the Python library should be installed
 conda activate nocturne
