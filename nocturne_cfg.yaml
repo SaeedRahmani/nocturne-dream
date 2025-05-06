@@ -7,8 +7,8 @@ hydra:
 
 # ----- Nocturne dataset ----- #
 nocturne:
-  load_directory: "/home/gavin/DEV/nocturne-dream/raw_data/"
-  save_directory: "/home/gavin/DEV/Dream_Imitation_AVs/raw_data/"
+  load_directory: "/home/saeed/Documents/GitHub/nocturne-dream/raw_data"
+  save_directory: "/home/saeed/Documents/GitHub/Dream_Imitation_AVs/raw_data/"
   parallel: true
   show_progress_bar: true
   dataset_mode: "image"
