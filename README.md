@@ -81,14 +81,24 @@ If you are using [Conda](https://docs.conda.io/en/latest/) (recommended), you ca
 
 ```bash
 # create the environment and install the dependencies
-conda env create -f environment.yml
+conda env create -f environment.yml --> (for our use case: conda create -n nocturne python=3.8 --yes --> pip install -r requirements.txt)
+
+NOTE: if we get an error for hydra, skip it for now. 
 
 # activate the environment where the Python library should be installed
 conda activate nocturne
 
 # run the C++ build and install Nocturne into the simulation environment
 python setup.py develop
+
+NOTE: Cmake error: sudo apt install g++ for fix it.
+NOTE: then, sudo apt-get install libsfml-dev 
 ```
+
+
+## Steps for the Dream Project:
+- download the Nocturne data (below) or the Waymo dataset. If you download the Waymo dataset, you'll need to do an extra step for converting it to the Nocturne format first and then continue:
+- 
 
 If you are not using Conda, simply run the last command to build and install Nocturne at your default Python path.
 
