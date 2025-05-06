@@ -81,7 +81,9 @@ If you are using [Conda](https://docs.conda.io/en/latest/) (recommended), you ca
 
 ```bash
 # create the environment and install the dependencies
-conda env create -f environment.yml --> (for our use case: conda create -n nocturne python=3.8 --yes --> pip install -r requirements.txt)
+conda env create -f environment.yml --> Do not use this. Go to the next line:
+For our use case: conda create -n nocturne python=3.8 --yes --> pip install -r requirements.txt)
+-- remove the last lines from the requirements.txt file because they are needed later and otherwise it will give error. (from hydra in the last lines).
 
 NOTE: if we get an error for hydra, skip it for now. 
 
@@ -98,7 +100,7 @@ NOTE: then, sudo apt-get install libsfml-dev
 
 ## Steps for the Dream Project:
 - download the Nocturne data (below) or the Waymo dataset. If you download the Waymo dataset, you'll need to do an extra step for converting it to the Nocturne format first and then continue:
-- 
+- run the code get_data...._sequential.py or ...parallel.py
 
 If you are not using Conda, simply run the last command to build and install Nocturne at your default Python path.
 
