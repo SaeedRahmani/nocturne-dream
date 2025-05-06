@@ -83,7 +83,7 @@ If you are using [Conda](https://docs.conda.io/en/latest/) (recommended), you ca
 # create the environment and install the dependencies
 conda env create -f environment.yml --> Do not use this. Go to the next line:
 For our use case: conda create -n nocturne python=3.8 --yes --> pip install -r requirements.txt)
--- remove the last lines from the requirements.txt file because they are needed later and otherwise it will give error. (from hydra in the last lines).
+-- remove the last lines from the requirements.txt file because they are needed later and otherwise it will give error. (from Additions).
 
 NOTE: if we get an error for hydra, skip it for now. 
 
