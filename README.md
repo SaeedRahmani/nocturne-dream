@@ -100,6 +100,8 @@ NOTE: then, sudo apt-get install libsfml-dev
 ## Steps for the Dream Project:
 - download the Nocturne data (below) or the Waymo dataset. If you download the Waymo dataset, you'll need to do an extra step for converting it to the Nocturne format first and then continue:
 - run the code get_data...._sequential.py or ...parallel.py
+- If error: version GLIBCXX_3.4.32' not found --> conda install -c conda-forge libstdcxx-ng
+- Updat the pathes in cfg file to the raw_data path where you put the nocturne data
 
 If you are not using Conda, simply run the last command to build and install Nocturne at your default Python path.
 
