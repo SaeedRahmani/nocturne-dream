@@ -1,4 +1,5 @@
 defaults:
+  - _self_
   - algorithm: ppo
   - override hydra/launcher: submitit_local
 
